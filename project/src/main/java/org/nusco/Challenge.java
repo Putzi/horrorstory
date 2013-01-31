@@ -18,8 +18,8 @@ public class Challenge {
 			"Che simpatico micetto!", "Un altro punto per aver descritto i tuoi animali.",
 			"Ancora un punto per aver costruito un cimitero per animali.",
 			"Povere bestie...", "A volte ritornano!",
-			"Me li ricordavo più carini...",
-			"Qualcuno ha visto il mio gatto?", "Oh mio dio, è orribile!" };
+			"Me li ricordavo piu' carini...",
+			"Qualcuno ha visto il mio gatto?", "Oh mio dio, e' orribile!" };
 	
 	public static void score() {
 		score++;
@@ -59,7 +59,7 @@ public class Challenge {
 	public static void reportError(Throwable t) {
 		if (t instanceof Exception) {
 			System.out.println(t.getMessage());
-			System.out.println("L'asserzione che fallisce è alla riga: " + t.getStackTrace()[2]);	
+			System.out.println("L'asserzione che fallisce e' alla riga: " + t.getStackTrace()[2]);	
 		} else {
 			System.out.println("Il tuo codice non compila. Fallo girare per ricevere il tuo primo punto!");
 		}
