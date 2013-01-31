@@ -11,7 +11,7 @@ For each pair, you need a computer with Eclipse and a connection to the Internet
 
 The challenge can last from 15 to 45 minutes, depending on the participants' knowledge of Java.
 
-Optional: before the challenge, open the online log (at _http://http://microlog.herokuapp.com_) and reset it (by sending an _HTTP DELETE_ to the same address). Keep in mind that the log is global - I'm assuming that only one person at a time will issue the challenge. If you want your own log, you can use the Ruby project at _https://github.com/nusco/microlog_.
+Optional: before the challenge, open the online log (at _http://microlog.herokuapp.com_) and reset it (by sending an _HTTP DELETE_ to the same address). Keep in mind that the log is global - I'm assuming that only one person at a time will issue the challenge. If you want your own log, you can use the Ruby project at _https://github.com/nusco/microlog_.
 
 ## Challenge Intro (12 minutes)
 
