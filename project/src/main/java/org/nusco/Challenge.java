@@ -14,12 +14,12 @@ import java.security.MessageDigest;
 // Remember: don't modify this class! (Actually, you don't even need to look at it... Just run it!
 public class Challenge {
 	private static int score = 0;
-	private static String[] steps = { "Your code compiles.", "Here, doggy...",
-			"What a cute pussycat!", "Another point for describing your pets.",
-			"Yet another point for creating a pet cemetery.",
-			"Poor little creatures...", "Sometimes they come back!",
-			"I'm pretty sure they used to look nicer...",
-			"Did anybody see my cat?", "Oh my God, this is horrible!" };
+	private static String[] steps = { "Il tuo codice compila.", "Un simpatico sacco di pulci...",
+			"Che simpatico micetto!", "Un altro punto per aver descritto i tuoi animali.",
+			"Ancora un punto per aver costruito un cimitero per animali.",
+			"Povere bestie...", "A volte ritornano!",
+			"Me li ricordavo più carini...",
+			"Qualcuno ha visto il mio gatto?", "Oh mio dio, è orribile!" };
 	
 	public static void score() {
 		score++;
@@ -30,11 +30,11 @@ public class Challenge {
 		System.out.println(steps[score - 1]);
 
 		if (score >= steps.length)
-			System.out.println("10 points! YOU WON!");
+			System.out.println("10 punti! HAI VINTO!");
 		else if (score != 1)
-			System.out.println("Your score: " + score + " points!");
+			System.out.println("Il tuo punteggio: " + score + " punti!");
 		else
-			System.out.println("Your score: 1 point!");
+			System.out.println("Il tuo punteggio: 1 punto!");
 
 		System.out.println();
 		
@@ -59,9 +59,9 @@ public class Challenge {
 	public static void reportError(Throwable t) {
 		if (t instanceof Exception) {
 			System.out.println(t.getMessage());
-			System.out.println("The failed assertion is at: " + t.getStackTrace()[2]);	
+			System.out.println("L'asserzione che fallisce è alla riga: " + t.getStackTrace()[2]);	
 		} else {
-			System.out.println("Your code doesn't compile yet. Make it run to score your first point!");
+			System.out.println("Il tuo codice non compila. Fallo girare per ricevere il tuo primo punto!");
 		}
 		System.exit(0);
 	}
@@ -70,8 +70,8 @@ public class Challenge {
 		try {
 			return new BufferedReader(new FileReader("team.txt")).readLine();
 		} catch (IOException e) {
-			System.out.println("I'm having trouble reading your team's name.");
-			System.out.println("Are you sure you have a team.txt file?");
+			System.out.println("Non riesco a leggere il nome del tuo team.");
+			System.out.println("Sei certo di avere un file team.txt?");
 			System.exit(0);
 			return null;
 		}
@@ -88,8 +88,8 @@ public class Challenge {
 	}
 
 	private static void failComparison(Object expected, Object actual) {
-		throw new RuntimeException("To get more points, fix this error: I expected [" + expected
-				+ "], but I got [" + actual + "]");
+		throw new RuntimeException("Per avere altri punti, correggi questo errore: My aspettavo [" + expected
+				+ "], ma ho avuto [" + actual + "]");
 	}
 
 	private static boolean checkSourceIntegrity() {
@@ -120,7 +120,7 @@ public class Challenge {
 	
 	public static void main(String[] args) {
 		if(!checkSourceIntegrity()) {
-			System.out.println("You modified the HorrorStory.java file! Please revert your changes.");
+			System.out.println("Hai modificato il file HorrorStory.java! Per favore, torna al file originale.");
 			System.exit(0);
 		}
 		try {
